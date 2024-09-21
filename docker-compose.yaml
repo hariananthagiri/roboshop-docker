@@ -1,7 +1,7 @@
 networks:
   default:
     external:
-      name: roboshop
+      name: roboshop # if we mention here in high level no need to give again network: roboshop in down
 volumes:
   mongodb: #docker volume create mongodb
   redis:
@@ -33,7 +33,7 @@ services:
     ports:
     - "80:80"
     depends_on:
-    - catalogue
+    - catalogue 
     - cart
     - user
     - shipping
